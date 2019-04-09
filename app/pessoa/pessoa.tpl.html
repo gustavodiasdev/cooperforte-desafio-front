@@ -1,22 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>CooperForte Desafio - Cadastro de Pessoa</title>
+</head>
+<body>
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+        <img src="https://is5-ssl.mzstatic.com/image/thumb/Purple115/v4/99/a7/97/99a7979a-d2e6-9e93-9e1a-dcf1130c8bc8/AppIcon-1x_U007emarketing-85-220-0-6.png/246x0w.jpg" width="30" height="30" alt="">
+    </a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#!/pessoa"><span class="sr-only">Lista de Pessoas</span></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    <div class="col-md-12">
+        <form>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="nome">Nome:</label>
+                    <input type="text" class="form-control" id="nome" placeholder="Nome Completo:">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="cpf">CPF:</label>
+                    <input type="text" class="form-control" id="cpf" placeholder="000.000.000-00">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="endereco">Endereço:</label>
+                <input type="text" class="form-control" id="endereco" placeholder="QNP 28 Conjunto U">
+            </div>
+            <div class="form-group">
+                <label for="complemento">Complemento:</label>
+                <input type="text" class="form-control" id="complemento" placeholder="Casa 48, Apartamento">
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="cidade">Cidade:</label>
+                    <input type="text" class="form-control" id="cidade">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="nr">Número:</label>
+                    <input type="text" class="form-control" id="nr">
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="uf">UF:</label>
+                    <input type="text" class="form-control" id="uf">
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="cep">CEP:</label>
+                    <input type="text" class="form-control" id="cep">
+                </div>
+            </div>
 
-<form>
-    <div>
-        <label for="name">Name:</label> <input type="text" id="name" name="user_name" ng-model="vm.pessoaForm.nome">
+            <div class="form-group">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                    <label class="form-check-label" for="gridCheck">
+                        Check me out
+                    </label>
+                </div>
+            </div>
+            <button class="btn btn-primary" >Cadastrar</button>
+        </form>
     </div>
-    <div>
-        <label for="cpf">CPF:</label> <input type="email" id="cpf" name="user_mail" ng-model="vm.pessoaForm.cpf">
-    </div>
-    <div>
-        <label for="endereco">Endereço:</label> <input type="email" id="endereco" name="user_mail" ng-model="vm.pessoaForm.endereco">
-    </div>
-    <div>
-        <label for="telefones">Telefones:</label> <input type="email" id="telefones" name="user_mail" ng-model="vm.pessoaForm.telefones">
-    </div>
-    <div>
-        <label for="emails">E-mails:</label> <input type="email" id="emails" name="user_mail" ng-model="vm.pessoaForm.emails">
-    </div>
+</div>
 
-    <div class="button">
-        <button ng-click="vm.cadastrarPessoa()">Cadastrar Pessoa</button>
-    </div>
-</form>
+</body>
+</html>
