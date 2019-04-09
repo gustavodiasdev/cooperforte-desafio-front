@@ -1,0 +1,22 @@
+
+<form>
+    <div>
+        <label for="name">Name:</label> <input type="text" id="name" name="user_name" ng-model="vm.pessoaForm.nome">
+    </div>
+    <div>
+        <label for="cpf">CPF:</label> <input type="email" id="cpf" name="user_mail" ng-model="vm.pessoaForm.cpf">
+    </div>
+    <div>
+        <label for="endereco">Endereço:</label> <input type="email" id="endereco" name="user_mail" ng-model="vm.pessoaForm.endereco">
+    </div>
+    <div>
+        <label for="telefones">Telefones:</label> <input type="email" id="telefones" name="user_mail" ng-model="vm.pessoaForm.telefones">
+    </div>
+    <div>
+        <label for="emails">E-mails:</label> <input type="email" id="emails" name="user_mail" ng-model="vm.pessoaForm.emails">
+    </div>
+
+    <div class="button">
+        <button ng-click="vm.cadastrarPessoa()">Cadastrar Pessoa</button>
+    </div>
+</form>
