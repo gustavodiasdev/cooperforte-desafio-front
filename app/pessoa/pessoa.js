@@ -9,36 +9,40 @@ angular.module('cooperforteApp.pessoa', ['ngRoute'])
         });
     }])
 
-    .controller('PessoaController', [function($http) {
+    .controller('PessoaController', PessoaController);
 
-        var vm = this;
+    PessoaController.$inject = ['$http'];
 
-        vm.cadastrarPessoa = cadastrarPessoa;
+    function PessoaController($http) {
 
-        function cadastrarPessoa() {
+    var vm = this;
+    vm.pessoa = {};
 
-            $http({
-                method: 'POST',
-                url: 'http://localhost:8081/cooperforte/api/pessoas',
-                data : vm.pessoaForm,
-                cache: false,
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            }).then(function(response) {
+    vm.cadastrarPessoa = cadastrarPessoa;
 
-                callback(response);
-            }, function(response) {
+    function cadastrarPessoa() {
+        $http({
+            method: 'POST',
+            url: 'http://localhost:8081/cooperforte/api/pessoas',
+            data : vm.pessoa,
+            cache: false,
+            headers: {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Headers':'Content-Type',
+                'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+                'Access-Control-Allow-Origin':'*'
+            }
+        }).then(function(response) {
+            callback(response);''
+        }, function(response) {
+            if (errorback) {
+                errorback(response);
+            }
+        });
+    }
 
-                if (errorback) {
-                    errorback(response);
-                }
-            });
-
-        }
 
 
 
 
-
-    }]);
+};
